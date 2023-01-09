@@ -19,10 +19,7 @@ import history from './helpers/history';
 import store from './store'
 
 // Components 
-import Header from './components/shared/Header/Header'
-import SideMenu from './components/shared/SideMenu/SideMenu'
 import Footer from './components/shared/Footer/Footer';
-import Helpdesk from './components/shared/Helpdesk/Helpdesk';
 
 function App() {
 
@@ -35,24 +32,21 @@ function App() {
     const routeComponents = routes.map(
         ({ path, component, protectedRoute }, key) => {
             return !protectedRoute ? (
-                <Route exact path={path} component={component} key={key} />
+                <Route exact path={ path } component={ component } key={ key } />
             ) : (
-                <PrivateRoute path={path} component={component} key={key} />
+                <PrivateRoute path={ path } component={ component } key={ key } />
             );
         }
     );
 
 
     return (
-        <Provider store={store}>
-            <Router history={history}>
-                {/* <SideMenu /> */}
-                <Header />
+        <Provider store={ store }>
+            <Router history={ history }>
                 <Switch>
-                    {routeComponents}
+                    { routeComponents }
                 </Switch>
                 <Footer />
-                {/* <Helpdesk /> */}
             </Router>
         </Provider>
     )
@@ -65,15 +59,15 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 
     return (
         <Route
-            {...rest}
-            render={props =>
+            { ...rest }
+            render={ props =>
                 token !== null ? (
-                    <Component {...props} />
+                    <Component { ...props } />
                 ) : (
                     <Redirect
-                        to={{
+                        to={ {
                             pathname: "/"
-                        }}
+                        } }
                     />
                 )
             }

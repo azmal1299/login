@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 
 //UI
-import hhlogo from '../../../assets/img/logo.png'
+import hhlogo from '../../../assets/ClientsLogo/logo.png'
 import './Footer.scss'
 
 class Footer extends Component {
@@ -13,9 +13,6 @@ class Footer extends Component {
                         <div className="footer-big">
                             <div className="ft-left">
                                 <h3 className="ft-title">Got a Project? <span>Let's talk</span> </h3>
-                                <ul className="submain-links">
-                                    <li className="submain-link animated-button linkhovers"><a className="short-link" href="">Catch Us</a></li>
-                                </ul>
                             </div>
                         </div>
                         <div className="footer-small">

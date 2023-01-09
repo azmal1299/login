@@ -4,7 +4,6 @@ import React, { Component, Fragment } from 'react'
 import Header from '../../shared/HeaderLogo'
 
 //UI
-import hum1 from '../../../assets/humans/hum1.png'
 import Overview from './components'
 
 import './index.scss'
@@ -70,11 +69,6 @@ class RealEstate extends Component {
                                             </div>
                                         </a>
                                     </div>
-                                </div>
-                                <div className="part part-right">
-                                    <figure>
-                                        <img src={ hum1 } alt="" />
-                                    </figure>
                                 </div>
                             </div>
                         </section>
