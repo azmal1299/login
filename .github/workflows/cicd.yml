@@ -2,9 +2,9 @@ name: CICD - H&H ADs
 
 on:
   push:
-    branches: [newlook]
+    branches: [master]
   pull_request:
-    branches: [newlook]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
