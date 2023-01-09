@@ -1,4 +1,4 @@
-name: CICD - H&H Website
+name: CICD - H&H ADs
 
 on:
   push:
