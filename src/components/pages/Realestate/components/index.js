@@ -23,7 +23,7 @@ import Img18 from '../../../../assets/ClientsLogo/alawaly.png'
 
 import './index.scss';
 
-export class Exitone extends Component {
+export class Realestate extends Component {
     render() {
         return (
             <Fragment>
@@ -121,4 +121,4 @@ export class Exitone extends Component {
     }
 }
 
-export default Exitone
+export default Realestate

@@ -7,13 +7,16 @@ import './index.scss'
 
 class HeaderLogo extends Component {
 
+    handleClick() {
+        window.open = "https://hnhmena.com"
+    }
     render() {
         return (
             <Fragment>
                 <header className="hh__header smaller" >
                     <div className="hh__header-container">
                         <div className="hh__header-left">
-                            <Link to="/" > <img className="brand-logo" src={ hhlogo } alt="" /></Link>
+                            <a href='https://hnhmena.com' > <img className="brand-logo" src={ hhlogo } alt="" /></a>
                         </div>
                     </div>
                 </header>

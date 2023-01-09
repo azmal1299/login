@@ -5,7 +5,13 @@ import hhlogo from '../../../assets/ClientsLogo/logo.png'
 import './Footer.scss'
 
 class Footer extends Component {
+
+    handleClick() {
+        window.open = "https://hnhmena.com"
+    }
+
     render() {
+
         return (
             <Fragment>
                 <div className="footer-wrapper" data-aos="fade-up" >
