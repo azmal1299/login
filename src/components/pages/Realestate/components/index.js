@@ -2,22 +2,9 @@ import React, { Component, Fragment } from 'react'
 import ReactPlayer from 'react-player/file'
 import YoutubePlayer from 'react-player/youtube'
 
-import Img1 from '../../../../assets/ClientsLogo/alj.png';
-import Img2 from '../../../../assets/ClientsLogo/exit1.jpg'
 import Img3 from '../../../../assets/ClientsLogo/almasakin.jpeg'
 import Img4 from '../../../../assets/ClientsLogo/darco.jpeg'
-import Img5 from '../../../../assets/ClientsLogo/fakeeh.png'
-import Img6 from '../../../../assets/ClientsLogo/monad.jpg'
-import Img7 from '../../../../assets/ClientsLogo/bonafide.jpg'
-import Img8 from '../../../../assets/ClientsLogo/injazat.png'
 import Img9 from '../../../../assets/ClientsLogo/majdiah.jpeg'
-import Img10 from '../../../../assets/ClientsLogo/messe.jpeg'
-import Img11 from '../../../../assets/ClientsLogo/ace.jpeg'
-import Img12 from '../../../../assets/ClientsLogo/petroRabigh.jpeg'
-import Img13 from '../../../../assets/ClientsLogo/Pillars.png'
-import Img14 from '../../../../assets/ClientsLogo/SABIC_Logo_RGB.png'
-import Img15 from '../../../../assets/ClientsLogo/samirAbbas.png'
-import Img16 from '../../../../assets/ClientsLogo/sgh.png'
 import Img17 from '../../../../assets/ClientsLogo/alargan.png'
 import Img18 from '../../../../assets/ClientsLogo/alawaly.png'
 
@@ -33,6 +20,9 @@ export class Realestate extends Component {
                         <div className="pro-intro">
                             <p className="pro-type">Real Estate Visualization</p>
                             <h3 className="pro-title">Interactive solutions for Real Estate properties</h3>
+                            <div className='img'>
+                                <YoutubePlayer url="https://youtu.be/hWIyHsy-5eg" controls={ true } />
+                            </div>
                         </div>
                         <div className="pro-details">
                             <div className="text-content">
@@ -53,19 +43,25 @@ export class Realestate extends Component {
                             </div>
                             <div className="text-content">
                                 <h6 className="topic">Features of our services</h6>
-                                <p> - Price search bar</p>
-                                <p> - Room wise search bar</p>
-                                <p> - Area wise search bar</p>
-                                <p> - View floor plans</p>
-                                <p> - Highlight your properties</p>
-                                <p> - Custom animations</p>
-                                <p> - Route marking for famous landmarks in your cities </p>
-                                <p> - Day & night view </p>
-                                <p> - CRM integration</p>
-                                <p> - Sales lead generation form </p>
-                                <p> - Upload videos, images & brochures </p>
-                                <p> - Works on windows / android applications</p>
-                                <p> - Web & mobile Options</p>
+                                <div className='feature-master'>
+                                    <div className='feature-box'>
+                                        <p> - Price search bar</p>
+                                        <p> - Room wise search bar</p>
+                                        <p> - Area wise search bar</p>
+                                        <p> - View floor plans</p>
+                                        <p> - Highlight your properties</p>
+                                        <p> - Custom animations</p>
+                                        <p> - Route marking for famous landmarks in your cities </p>
+                                    </div>
+                                    <div className='feature-box'>
+                                        <p> - Day & night view </p>
+                                        <p> - CRM integration</p>
+                                        <p> - Sales lead generation form </p>
+                                        <p> - Upload videos, images & brochures </p>
+                                        <p> - Works on windows / android applications</p>
+                                        <p> - Web & mobile Options</p>
+                                    </div>
+                                </div>
                             </div>
                             <div className="text-content">
                                 <h6 className="topic">Augmented reality</h6>
@@ -84,7 +80,7 @@ export class Realestate extends Component {
                             <div className="inner-content">
                                 <div className="hh-client-content">
                                     <h6 className="topic">Our Clients</h6>
-                                    <p className="hh-client-para"> We like our clients. We like helping them seize opportunities and find solutions.
+                                    <p> We like our clients. We like helping them seize opportunities and find solutions.
                                         They are friends and co-conspirators. Together we build ideas, and build on those ideas.   </p>
                                 </div>
 

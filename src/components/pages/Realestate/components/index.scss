@@ -12,11 +12,11 @@
         perspective: 1px;
         transform-style: preserve-3d;
         height: 100%;
-        // overflow-y: scroll;
+        overflow-y: hidden;
         overflow-x: hidden;
 
         .pro-intro {
-            min-height: 100vh;
+            min-height: 60vh;
             position: relative;
             transform-style: inherit;
             display: flex;
@@ -77,14 +77,21 @@
         z-index: 1;
         min-height: 100vh;
         transform-style: inherit;
-    
+        .feature-master {
+            display: flex;
+            .feature-box {
+                width: 50%;
+                height: 300px;
+            }
+        }
         p {
             text-align: left;
             font-size: 1rem;
             white-space: pre-wrap;
             word-break: break-word;
             caret-color: rgb(55, 53, 47);
-            padding: 3px 2px;
+            color: black;
+            // padding: 3px 2px;
             font-weight: 400;
 
     
@@ -113,6 +120,15 @@
         }
     }
     
+    .text-content {
+        margin-top: 50px;
+    }
+    
+    .topic {
+        margin-top: 50px;
+        font-weight: bolder;
+        margin-bottom: 30px;
+    }
     
     .img {
         display: flex;
