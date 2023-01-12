@@ -91,22 +91,9 @@ export class Realestate extends Component {
                                 <div className="hh-client-details">
                                     <div className='hh-client-details-content'>
                                         <div className="img-container">
-                                            <img src={ Img1 } alt="" />
-                                            <img src={ Img2 } alt="" />
                                             <img src={ Img3 } alt="" />
                                             <img src={ Img4 } alt="" />
-                                            <img src={ Img5 } alt="" />
-                                            <img src={ Img6 } alt="" />
-                                            <img src={ Img7 } alt="" />
-                                            <img src={ Img8 } alt="" />
                                             <img src={ Img9 } alt="" />
-                                            <img src={ Img10 } alt="" />
-                                            <img src={ Img11 } alt="" />
-                                            <img src={ Img12 } alt="" />
-                                            <img src={ Img13 } alt="" />
-                                            <img src={ Img14 } alt="" />
-                                            <img src={ Img15 } alt="" />
-                                            <img src={ Img16 } alt="" />
                                             <img src={ Img17 } alt="" />
                                             <img src={ Img18 } style={ { height: '80px' } } alt="" />
                                         </div>
