@@ -30,7 +30,7 @@ class Footer extends Component {
                             </div>
 
                             <div className="copy-right">
-                                &copy; All rights reserved. hnhreality
+                                &copy; All rights reserved. H&H TECHNOLOGY
                             </div>
 
                             <div className="social-links">
