@@ -20,6 +20,9 @@ class Footer extends Component {
                             <div className="ft-left">
                                 <h3 className="ft-title">Got a Project? <span>Let's talk</span> </h3>
                             </div>
+                            <div className="ft-right">
+                                <button data-tf-slider="sblQtEu6" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=H&H - 01- Lead Capture Form Template (copy)" data-tf-transitive-search-params style={ { all: 'unset', 'font-family': 'Helvetica,Arial,sans-serif', display: 'inline-block', maxWidth: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', backgroundColor: '#07B19A', color: '#fff', fontSize: '20px', borderRadius: '25px', padding: '0 33px', fontWeight: 'bold', height: '50px', cursor: 'pointer', lineHeight: '50px', textAlign: 'center', margin: 0, textDecoration: 'none' } }>Contact us now</button>
+                            </div>
                         </div>
                         <div className="footer-small">
                             <div className="logo-brand">

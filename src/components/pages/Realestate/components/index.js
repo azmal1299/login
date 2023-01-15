@@ -21,7 +21,7 @@ export class Realestate extends Component {
                             <p className="pro-type">Real Estate Visualization</p>
                             <h3 className="pro-title">Interactive solutions for Real Estate properties</h3>
                             <div className='img'>
-                                <YoutubePlayer url="https://youtu.be/hWIyHsy-5eg" controls={ true } />
+                                <YoutubePlayer className="react__player" url="https://youtu.be/hWIyHsy-5eg" controls={ true } />
                             </div>
                         </div>
                         <div className="pro-details">
@@ -33,12 +33,12 @@ export class Realestate extends Component {
                             </div>
                             <div className="text-content">
                                 <div className='img'>
-                                    <ReactPlayer url="https://hnh-covid.s3.amazonaws.com/hnh_real_estate.mp4" controls={ true } />
+                                    <ReactPlayer className="react__player" url="https://hnh-covid.s3.amazonaws.com/hnh_real_estate.mp4" controls={ true } />
                                 </div>
 
                                 <p>Or Use our mid level solutions to wow all your visitors & sign them up for the new properties.</p>
                                 <div className='img'>
-                                    <YoutubePlayer url="https://www.youtube.com/watch?v=uYXwbE_CTec" controls={ true } />
+                                    <YoutubePlayer className="react__player" url="https://www.youtube.com/watch?v=uYXwbE_CTec" controls={ true } />
                                 </div>
                             </div>
                             <div className="text-content">
@@ -68,7 +68,7 @@ export class Realestate extends Component {
                                 <p>Can’t make clients visit your property, no worries take your property to your clients! </p>
                                 <p>Through augmented reality technology clients can walk in their new homes just by scanning a QR code & voila ! </p>
                                 <div className='img'>
-                                    <YoutubePlayer url="https://www.youtube.com/watch?v=suLIDA7qkeE" controls={ true } />
+                                    <YoutubePlayer className="react__player" url="https://www.youtube.com/watch?v=suLIDA7qkeE" controls={ true } />
                                 </div>
                                 <h6 className="topic">Features of our services</h6>
                                 <p> - Multiple doors</p>
