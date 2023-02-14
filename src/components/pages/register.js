@@ -2,7 +2,7 @@ import { event } from 'jquery';
 import React,{useState} from 'react';
 // import { Link } from 'react-router-dom';
 import './index.scss';
-// import '/pngegg.png';
+import '/pngegg.png';
 function Register(){
 
     const [state, setState] = useState(
