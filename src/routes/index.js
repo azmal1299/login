@@ -1,12 +1,19 @@
 // import NotFound from "../components/Includes/NotFound";
 
 //Components
-import SignIn from '../components/pages/SignIn/index'
+import Login from '../components/pages/SignIn/index'
+// import SignIn from '../components/pages/SignIn/index'
+import Register from '../components/pages/SignIn/register'
 
 const routes = [
     {
         path: "/",
-        component: SignIn,
+        component: Login,
+        protectedRoute: false,
+    },
+    {
+        path: "/",
+        component: Register,
         protectedRoute: false,
     },
     // {
