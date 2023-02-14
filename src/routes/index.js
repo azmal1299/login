@@ -1,7 +1,7 @@
 // import NotFound from "../components/Includes/NotFound";
 
 //Components
-import SignIn from '../components/pages/SignIn/register'
+import SignIn from '../components/pages/SignIn/index'
 
 const routes = [
     {
