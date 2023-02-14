@@ -1,6 +1,6 @@
 import { event } from 'jquery';
 import React, { useState } from 'react';
-// import {useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import './index.scss';
 
 function Login() {
