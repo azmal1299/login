@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import {useHistory} from "react-router-dom";
 import './index.scss';
 
@@ -40,8 +41,8 @@ function Login() {
                 onChange={(event) => handleChange(event, 'password')}
             />
             <button type="submit" onClick={() => handleSubmit()} className="submit-btn">Login</button>
-            <a href='/register' className="link">don't have an account? Rgister here</a>
-            <a href="#" className="link">main-page</a>
+            <Link to={"./register"} className="link">don't have an account? Rgister here</Link>
+            <Link to={"./home"} className="link">main-page</Link>
         </div>
     )
 }

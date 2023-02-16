@@ -21,7 +21,8 @@ html {
 body {
 
     background-image: url(/src/car.jpg);
-    background-size: cover;
+    background-size:100% 100vh;
+    // background-size: cover;
     background-repeat: no-repeat;
     // background:url(/pngegg.png);
     // background-color:papayawhip;

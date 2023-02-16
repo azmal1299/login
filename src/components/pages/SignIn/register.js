@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.scss';
-// import '/pngegg.png';
+
 function Register(){
 
     const [state, setState] = useState(
@@ -55,7 +55,7 @@ return(
         onChange={(event) =>handleChange(event, 'password')}
         />
         <button type='submit'  onClick={() => handleSubmit()}  className="submit-btn">Register</button>
-        <a href='/index' className="link">already have account? log in here</a>
+        <Link to={"/"} className="link">already have account? log in here</Link>
         </div>
     )
 }
