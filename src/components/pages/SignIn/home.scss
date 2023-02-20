@@ -27,7 +27,6 @@
 }
 .home span{
     color: rgb(201, 140, 118);
-    
 }
 
 .home ul{
@@ -70,12 +69,12 @@
 }
 .home .section1 .paa{  
     position: absolute;
-    margin: 0;
-    padding: 0;
     top: 35%;
     left: 50%;
     transform: translatex(-50%);
     text-align: center;
+    // align-items: center;
+    // justify-content: center;
     font-size:50px;
     font-weight: bolder;
     color: white;
