@@ -43,10 +43,10 @@
         transition: .5s;
         text-transform: capitalize;
 }
-input::placeholder{
+.form input::placeholder{
     color: white;
 }
-input:focus,
+.form input:focus,
 .submit-btn:hover{
     background: white;
     color: black;

@@ -1,4 +1,4 @@
-
+// import { name } from 'file-loader';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './contact.scss';
@@ -38,8 +38,8 @@ const Contact = () => {
         }
         return errors;
     };
+function Contact() {
 
-    //   function Contact() {
     return (
         <div className='contact'>
             <Link to="./home" className="home">home-page</Link>
@@ -80,11 +80,11 @@ const Contact = () => {
                         name="message"
                         value={message}
                         placeholder='enter message'
-                        onChange={(e) => setMessage(e.target.value)}>    
-                        </textarea>
+                        onChange={(e) => setMessage(e.target.value)}>
+                    </textarea>
                     {errors.message && <div className="error">{errors.message}</div>}
                 </div>
-                <button className="submit-msg"  type="submit" onClick={() => handleSubmit() }>submit</button>
+                <button className="submit-msg" type="submit" onClick={() => handleSubmit()}>submit</button>
             </div>
             <div className='email'>
                 <ul>
@@ -93,44 +93,8 @@ const Contact = () => {
                     <li>email 2: abilaa@gmail.com</li>
                 </ul>
             </div>
-            {/* //     <div className='contact1'> 
-
-        //         <h1>Contact Us</h1>
-        //         <form onSubmit={handleSubmit}>
-        //             <div>
-        //                 <label>Name:</label>
-        //                 <input
-        //                     type="text"
-        //                     name="name"
-        //                     value={name}
-        //                     onChange={(e) => setName(e.target.value)}
-        //                 />
-        //                 {errors.name && <div className="error">{errors.name}</div>}
-        //             </div>
-        //             <div>
-        //                 <label>Email:</label>
-        //                 <input
-        //                     type="email"
-        //                     name="email"
-        //                     value={email}
-        //                     onChange={(e) => setEmail(e.target.value)}
-        //                 />
-        //                 {errors.email && <div className="error">{errors.email}</div>}
-        //             </div>
-        //             <div>
-        //                 <label>Message:</label>
-        //                 <textarea
-        //                     name="message"
-        //                     value={message}
-        //                     onChange={(e) => setMessage(e.target.value)}
-        //                 ></textarea>
-        //                 {errors.message && <div className="error">{errors.message}</div>}
-        //             </div>
-        //             <button type="submit">Submit</button>
-        //         </form>
-    //     </div>*/}
-        </div>
-    );
-
-};
-export default Contact;
+            </div>
+            );
+            };
+        }
+            export default Contact;

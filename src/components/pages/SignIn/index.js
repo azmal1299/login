@@ -40,6 +40,7 @@ function Login() {
             <h1 className="heading">Login page</h1>
             <input
                 type="text"
+       
                 value={username}
                 placeholder="username"
                 onChange={(event) => {handleChange(event, 'username');}}

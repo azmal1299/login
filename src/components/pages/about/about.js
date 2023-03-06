@@ -3,7 +3,7 @@ import React from 'react';
 // import {useHistory} from "react-router-dom";
 import { Link } from 'react-router-dom';
 import './about.scss';
-import Home from './home';
+// import Home from '../home/home';
 function About() {
 
     return (
