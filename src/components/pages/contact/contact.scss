@@ -56,15 +56,16 @@
     text-transform: capitalize;
     font-size: 15px;
     color: white;
-    background: none;
+    background:rgba(0,0,0,0.5);
     // text-decoration: underline;
     cursor: pointer;
     outline: none;
-    border: none;
+    border-radius:5px;
 }
 .submit-msg:hover{
-    background-color: rgb(92, 92, 158);
+    background-color: rgb(170, 170, 204);
     border-radius: 5px;
+    color: black;
 }
 .contact .mobile{
     margin-left: 30px;

@@ -5,10 +5,17 @@ import './home1.scss'
 function Home1() {
 
     const [state, setState] = useState({
-        fullName: '',
+        firstName: '',
+        lastName:'',
         email: '',
+        mobile:'',
         phone: '',
-        address: '',
+        street:'',
+        town:'',
+        city:'',
+        State:'',
+        country:'',
+        pincode:'',
         activeIndex: '',
         isEdit: false,
       })
@@ -25,10 +32,10 @@ function Home1() {
       }
     
       const handleSubmit = () => {
-        const { fullName, email, phone, address } = state;
+        const { firstName,lastName, email,mobile, phone,street,town,city,State,country,pincode } = state;
     
         const data = {
-          fullName, email, phone, address,
+          firstName,lastName, email,mobile, phone,street,town,city,State,country,pincode, 
         }
     
         const employees = localStorage.getItem('employees');
@@ -41,10 +48,17 @@ function Home1() {
     
         localStorage.setItem('employees', JSON.stringify(employeeList))
         setState({
-          fullName: '',
+          firstName: '',
+          lastName:'',
           email: '',
+          mobile:'',
           phone: '',
-          address: ''
+          street:'',
+          town:'',
+          city:'',
+          State:'',
+          country:'',
+          pincode:'',
         })
       }
     
@@ -53,7 +67,7 @@ function Home1() {
         const employees = localStorage.getItem('employees');
         if (employees) {
           const formatedData = JSON.parse(employees);
-          const index = formatedData.findIndex(f => f.fullName === emp.fullName)
+          const index = formatedData.findIndex(f => f.firstName === emp.firstName)
           formatedData.splice(index, 1);
           localStorage.setItem('employees', JSON.stringify(formatedData))
         }
@@ -64,10 +78,17 @@ function Home1() {
           return {
             ...prevState,
             activeIndex: index,
-            fullName: emp.fullName,
+            firstName: emp.firstName,
+            lastName:emp.lastName,
             email: emp.email,
+            mobile:emp.mobile,
             phone: emp.phone,
-            address: emp.address,
+            street:emp.street,
+            town:emp.town,
+            city:emp.city,
+            Sate:emp.State,
+            country:emp.country,
+            pincode:emp.pincode,
             isEdit: true,
           }
         })
@@ -75,21 +96,33 @@ function Home1() {
     
     
       const handleUpdate = () => {
-        const { fullName, email, phone, address, activeIndex } = state;
+        const { firstName,lastName, email,mobile, phone,street,town,city,State,country,pincode, activeIndex } = state;
         const employees = localStorage.getItem('employees');
         const formatedData = JSON.parse(employees);
-        formatedData[activeIndex].fullName = fullName;
+        formatedData[activeIndex].firstName = firstName;
+        formatedData[activeIndex].lastName = lastName;
         formatedData[activeIndex].email = email;
+        formatedData[activeIndex].mobile = mobile;
         formatedData[activeIndex].phone = phone;
-        formatedData[activeIndex].address = address;
-    
+        formatedData[activeIndex].street = street;
+        formatedData[activeIndex].town =town;
+        formatedData[activeIndex].city = city;
+        formatedData[activeIndex].State= State;
+        formatedData[activeIndex].country = country;
+        formatedData[activeIndex].pincode = pincode;
         localStorage.setItem('employees', JSON.stringify(formatedData))
         setState({
-          fullName: '',
+          firstName: '',
+          lastName:'',
           email: '',
+          mobile:'',
           phone: '',
-          address: '',
-          activeIndex: '',
+          street:'',
+          town:'',
+          city:'',
+          State:'',
+          country:'',
+          pincode:'',
           isEdit: false
         })
       }
@@ -99,10 +132,17 @@ function Home1() {
         if (!employees) return <tr><td> No Record Found </td></tr>;
         return JSON.parse(employees).map((emp, index) => (
           <tr>
-            <td>{ emp.fullName }</td>
+            <td>{ emp.firstName }</td>
+            <td>{ emp.lastName }</td>
             <td>{ emp.email }</td>
-            <td>{ emp.phone }</td>
-            <td>{ emp.address }</td>
+            <td>{ emp.mobile }</td>
+            <td>{ emp.phone}</td>
+            <td>{ emp.street }</td>
+            <td>{ emp.town }</td>
+            <td>{ emp.city }</td>
+            <td>{ emp.pincode }</td>
+            <td>{ emp.State }</td>
+            <td>{ emp.country }</td>
             <td>
               <button onClick={ () => handleEdit(emp, index) }>Edit</button>
               <button onClick={ () => handleDelete(emp) }>Delete</button>
@@ -111,15 +151,15 @@ function Home1() {
         ))
       }
     
-      const { firstName,lastName, email,mobile, phone, street, town,city,State,country, isEdit } = state;
+      const { firstName,lastName, email,mobile, phone, street, town,city,State,country,pincode, isEdit } = state;
 
     return (
         <div className="page-container">
 
-            <div class="form-container">
+            <div className="form-container">
                 <p>CRUD-Operation</p>
                 <div className="form-field"><input type='text' placeholder="first Name" name="firstName" value={ firstName } onChange={ (e) => handleChange(e.target.value, 'firstName') }/></div>
-                <div className="form-field"><input type='text' placeholder="second name" name="lastName" value={ lastName } onChange={ (e) => handleChange(e.target.value, 'lastName') }/></div>
+                <div className="form-field"><input type='text' placeholder="lastname name" name="lastName" value={ lastName } onChange={ (e) => handleChange(e.target.value, 'lastName') }/></div>
                 <div className="form-field"><input type='email' placeholder="email" name="email" value={ email } onChange={ (e) => handleChange(e.target.value, 'email') }/></div>
                 <div className="form-field"><input type='number' placeholder="mobile" name="mobile" value={ mobile } onChange={ (e) => handleChange(e.target.value, 'mobile') }/></div>
                 <div className="form-field"><input type='number' placeholder="phone" name="phone" value={ phone } onChange={ (e) => handleChange(e.target.value, 'phone') }/></div>
@@ -133,17 +173,19 @@ function Home1() {
             </div>
             <table className="table">
                 <thead>
+                  <tr>
                     <th>first name</th>
                     <th>last name</th>
                     <th>email</th>
                     <th>mobile</th>
                     <th>phone</th>
-                    <th>street-1</th>
+                    <th>street</th>
                     <th>town</th>
                     <th>city</th>
                     <th>state</th>
                     <th>country</th>
                     <th>pincode</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {/* <tr><td>hello</td></tr>

@@ -6,21 +6,21 @@
 .carspage{
     display: flex;
     flex-direction: column;
-    background-color: rgb(11, 15, 14);
-    height: 152vh;    
+    background-color: rgb(198, 218, 235);
+    height: 280vh;    
     width: 100%;  
     font-family: 'Times New Roman', Times, serif;
     text-transform: capitalize;
     font-weight: bold;
 }
 .ho-p{
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     padding: 10px 20px;
     text-transform: capitalize;
     font-size: 15px;
-    color: rgb(248, 244, 244);
+    color: rgb(22, 21, 21);
     background: none;
     text-decoration:none;
     cursor: pointer;
@@ -39,49 +39,60 @@
     align-items: center;
     text-align: center;
     width: 80%;
-    height: 152vh;
+    height: 280vh;
     background-color: white;
 }
 .car-select  h1{
     position: relative;
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 30px;
+    // margin-right: 40px;
     align-items: center;
     justify-content: center;
     text-align: center;
     text-transform: capitalize;
     font-weight: bolder;
+    border: 5px solid white;
     background-color: rgb(198, 218, 235);
 }
 .car-select .car-row{
     display: flex;
     flex-direction: column;
-
+    // align-items: center;
+    // justify-content: center;
+    // text-align: center;
+    // margin-right: -40px;
 }
 .car-select .row1{
     position:relative;
     margin: 60px;
     margin-top: 20px;
+    // margin-right: 20px;
     display:flex;
     flex-direction:row;
 }
- .car-row .row2{
-    position:relative;
-    display:flex;
-    flex-direction: row;
-}
-
+//  .car-row .row2{
+//     position:relative;
+//     display:flex;
+//     flex-direction: row;
+//     // margin-right: -20px;
+// }
 .car-select .car-col{
     background-color: rgb(240, 221, 221);
     display:inline-flex;
     flex-direction: column;
     margin-top: 20px;
     margin-right: 50px;
+    border: .5px solid rgb(172, 156, 156) ;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(179, 167, 167);
 }
 .car-select img{
+    background-color: white;
     width:200px;
     height: 100px;
     position: relative;
+    border-radius: 5px;
 }
 .car-select .car-detail p{
     position: relative;
@@ -102,7 +113,6 @@
     color:white;
     padding: 0 60px;
     transition: .5s;
-
 }
 .car-select .link{
     background-color: rgb(131, 131, 204);

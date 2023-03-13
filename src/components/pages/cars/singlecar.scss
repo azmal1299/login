@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    display: flexbox;
+}
+.single-car{
+// background-color: red;
+    // display: flex;
+    // flex-direction: column;
+    background-color: rgb(75, 160, 139);
+    height: 300vh;    
+    width: 100%;  
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.single-car .ho-p{
+   position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: white;
+    background: none;
+    text-decoration:none;
+    cursor: pointer;
+}
+.single-car .ho-p:hover{
+    text-decoration: underline;
+    transition: .3s;
+    font-size: 17px;
+    border-radius: 5px;
+    color: white;
+}
+.single-car .ho-p2{
+   position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: white;
+    background: none;
+    text-decoration:none;
+    cursor: pointer;
+    // outline: none;
+    // border: none;
+}
+.single-car .ho-p2:hover{
+    text-decoration: underline;
+    transition: .3s;
+    font-size: 17px;
+    border-radius: 5px;
+    // background-color: rgb(13, 83, 72) ;
+    color: white;
+}
+
+.single-car .container{
+    background-color: white;
+    width:80%;
+    height: 300vh;
+}
+.single-car img{
+    // position: absolute;
+    width: 950px;
+    height: 500px;
+    // border: .5px solid black;
+}
+.single-car .text{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  // position: relative;
+}
+.single-car .row{
+    display: flex;
+    flex-wrap: wrap;
+    // margin-top: 50px ;
+    border:none;
+    // height: 80vh;
+    margin-right: -15px;
+    margin-left: -15px;
+    border: 1px solid rgb(190, 181, 181);
+    // flex-direction:column;
+}
+.single-car .cat-det{
+  display: flex;
+  flex-direction: column;
+}
+.single-car .col{
+    flex-basis: 0;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    // border: .7px solid rgb(190, 181, 181);
+    flex-grow: 1;
+    -webkit-box-flex: 1;
+    max-width: 100%;
+    // border-top: 1px solid rgb(199, 185, 185);
+}
+.single-car .media{
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    // -ms-flex-align: start;
+    align-items: flex-start;
+
+}
+.single-car .media-body p{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  // margin-left: -10px;
+  // align-items: center;
+  // text-align: center;
+  // justify-content: center;
+  // word-spacing: 20px;
+}
+.single-car .content-list{
+  align-items: center;
+  text-align: center;
+  justify-content: center;  
+  display: flex;
+  flex-direction: row;
+}
+.single-car .content-list .nav{
+  font-size: 18px;
+  font-weight: 400;
+  display: inline-block;
+}
+.single-car .content-list .nav li{
+  display: inline-block;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+.single-car .content-list .nav li:hover{
+  cursor: pointer;
+}
+.single-car .tab-content{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  // margin: 10px auto;
+}
+.single-car .tab-content .features{
+  list-style: none;
+  align-items: center;
+  text-align:justify;
+  justify-content: center;
+  margin-left: 70px;
+}
+.single-car .discription h3{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  color: black;
+  font-weight: bolder;
+  margin-top: 30px;
+}
+.single-car .discription p{
+  font-size: 25px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.single-car .button{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.single-car .book{
+  color: white;
+  background-color:rgb(75, 160, 139);
+  border-radius: 5px;
+  border: .5px solid rgb(20, 104, 153);
+  padding: 8px 20px;
+  font-size: 25px;
+}
+.single-car .book:hover{
+  font-size: 27px;
+  background-color: rgb(20, 104, 153);
+  transition: .5s;
+}
+
+
+
+
+
+
+
+
+// .single-car .tab-content>:active

@@ -2,12 +2,21 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCarAlt, faContactCard, faHandHolding, faHandsBound, faHandshakeAlt, faHomeAlt, faManatSign, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 // import {useHistory} from "react-router-dom";
+import cookies from "browser-cookies";
+import { History } from '../../../helpers/history';
 import { Link } from 'react-router-dom';
-import Navbar from '../../shared/header/navbar';
-import './home.scss';
+import './home2.scss';
+// import { Navbar } from 'react-bootstrap';
 
-function Home() {
-
+function Navbar() {
+    const handleLogout = () => {
+        cookies.erase("token");
+        history.push("/");
+      };
+      console.log("history: ", history.location.pathname);
+    
+      const pathName = history.location.pathname;
+    
     return (
         <div className='home'>
             <nav>
@@ -21,23 +30,12 @@ function Home() {
                     <li><Link to="./cars"><FontAwesomeIcon icon={faCarAlt} />cars</Link></li>
                     <li><Link to="./contact"><FontAwesomeIcon icon={faContactCard} />contact</Link></li>
                     <li><Link to="./about"><FontAwesomeIcon icon={faHandshakeAlt} />about</Link></li>
-                    <li><Link to="./"><FontAwesomeIcon icon={faPowerOff} />logout</Link></li>
-                    {/* <li><Link to="./home1">home1</Link></li> */}
-                    {/* <li><Link to="./cars1">car1</Link></li>  */}
+                    <li><Link to="./" onClick={()=>handleLogout()}><FontAwesomeIcon icon={faPowerOff} />logout</Link></li>
+                    {/* <li><Link to="./home1">home1</Link></li>
+                        <li><Link to="./cars1">car1</Link></li> */}
                 </ul>
             </nav>
-                {/* <Navbar/> */}
-            <div className='sections'>
-                <section className='section1 '>
-                    <div className="paa">best <span>car dealer</span> in town
-                        <button className="contact1"><FontAwesomeIcon icon={faContactCard} />contact-us</button>
-                    </div>
-                </section>
-                <section className='cars'>
-                </section>
             </div>
-        </div>
-
-    )
-}
-export default Home;
+            )
+            }
+            export default Navbar;

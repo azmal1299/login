@@ -7,38 +7,13 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [errors, setErrors] = useState({});
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const errors = validateForm();
-        if (Object.keys(errors).length === 0) {
-            // submit the form to your server
-            console.log('Submitting form...');
-            setName('');
-            setEmail('');
-            setMessage('');
-        } else {
-            setErrors(errors);
-        }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(`Submitting form with name: ${name}, email: ${email}, message: ${message}`);
+        // You can add your own logic here to submit the form data to your server
     };
 
-    const validateForm = () => {
-        const errors = {};
-        if (!name.trim()) {
-            errors.name = 'Please enter your name';
-        }
-        if (!email.trim()) {
-            errors.email = 'Please enter your email';
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            errors.email = 'Please enter a valid email';
-        }
-        if (!message.trim()) {
-            errors.message = 'Please enter your message';
-        }
-        return errors;
-    };
-function Contact() {
 
     return (
         <div className='contact'>
@@ -52,40 +27,22 @@ function Contact() {
             </div>
             <div className='form'>
                 <h6>contact with message</h6>
+
+                <label>Name:</label>
                 <div className='min'>
-                    <label>Name:   </label>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder='user name'
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                    {errors.name && <div className="error">{errors.name}</div>}
+                    <input type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} required />
                 </div>
+
+                <label>Email:</label>
                 <div className='min'>
-                    <label>Email:   </label>
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder='user email'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    {errors.email && <div className="error">{errors.email}</div>}
-                </div>
-                <div className='min'>
+                    <input type="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
+</div>
                     <label>Message:</label>
-                    <textarea
-                        name="message"
-                        value={message}
-                        placeholder='enter message'
-                        onChange={(e) => setMessage(e.target.value)}>
-                    </textarea>
-                    {errors.message && <div className="error">{errors.message}</div>}
+                    <div className='min'>
+                        <textarea id="message" value={message} onChange={(event) => setMessage(event.target.value)} required />
+                    </div>
+                    <button type="submit" className='submit-msg' onSubmit={handleSubmit}>Submit</button>
                 </div>
-                <button className="submit-msg" type="submit" onClick={() => handleSubmit()}>submit</button>
-            </div>
             <div className='email'>
                 <ul>
                     <h6>contact with email</h6>
@@ -93,8 +50,7 @@ function Contact() {
                     <li>email 2: abilaa@gmail.com</li>
                 </ul>
             </div>
-            </div>
-            );
-            };
-        }
-            export default Contact;
+        </div>
+    );
+};
+export default Contact;

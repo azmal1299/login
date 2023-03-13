@@ -52,6 +52,7 @@ return(
         <input
         type="password" 
         placeholder="password"
+        value={password}
         onChange={(event) =>handleChange(event, 'password')}
         />
         <button type='submit'  onClick={() => handleSubmit()}  className="submit-btn">Register</button>
